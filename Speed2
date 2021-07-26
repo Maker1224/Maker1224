@@ -1,0 +1,305 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local BackgroundFrame = Instance.new("Frame")
+local WalkSpeedBox = Instance.new("TextBox")
+local JumpPowerBox = Instance.new("TextBox")
+local SubmitWalkSpeed = Instance.new("TextButton")
+local SubmitJumpPower = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local CloseButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ButtonRespawn = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local FPSLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Main.Position = UDim2.new(0.270430893, 0, 0.214890003, 0)
+Main.Size = UDim2.new(0, 618, 0, 334)
+Main.Visible = true
+Main.Active = true
+Main.Draggable = true
+
+UICorner.Parent = Main
+
+BackgroundFrame.Name = "BackgroundFrame"
+BackgroundFrame.Parent = Main
+BackgroundFrame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+BackgroundFrame.BackgroundTransparency = 1.000
+BackgroundFrame.Position = UDim2.new(0.150166601, 0, 0.19960168, 0)
+BackgroundFrame.Size = UDim2.new(0, 431, 0, 267)
+
+WalkSpeedBox.Name = "WalkSpeedBox"
+WalkSpeedBox.Parent = BackgroundFrame
+WalkSpeedBox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+WalkSpeedBox.Position = UDim2.new(0.0301624127, 0, 0.277153552, 0)
+WalkSpeedBox.Size = UDim2.new(0, 182, 0, 50)
+WalkSpeedBox.Font = Enum.Font.Nunito
+WalkSpeedBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeedBox.PlaceholderText = "Insert Walk Speed"
+WalkSpeedBox.Text = ""
+WalkSpeedBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeedBox.TextScaled = true
+WalkSpeedBox.TextSize = 14.000
+WalkSpeedBox.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeedBox.TextWrapped = true
+
+JumpPowerBox.Name = "JumpPowerBox"
+JumpPowerBox.Parent = BackgroundFrame
+JumpPowerBox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+JumpPowerBox.Position = UDim2.new(0.559164703, 0, 0.277153552, 0)
+JumpPowerBox.Size = UDim2.new(0, 182, 0, 50)
+JumpPowerBox.Font = Enum.Font.Nunito
+JumpPowerBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+JumpPowerBox.PlaceholderText = "Insert Jump Power"
+JumpPowerBox.Text = ""
+JumpPowerBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+JumpPowerBox.TextScaled = true
+JumpPowerBox.TextSize = 14.000
+JumpPowerBox.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+JumpPowerBox.TextWrapped = true
+
+SubmitWalkSpeed.Name = "SubmitWalkSpeed"
+SubmitWalkSpeed.Parent = BackgroundFrame
+SubmitWalkSpeed.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+SubmitWalkSpeed.Position = UDim2.new(0.0301624127, 0, 0.565542996, 0)
+SubmitWalkSpeed.Size = UDim2.new(0, 182, 0, 41)
+SubmitWalkSpeed.Font = Enum.Font.TitilliumWeb
+SubmitWalkSpeed.Text = "Submit"
+SubmitWalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitWalkSpeed.TextScaled = true
+SubmitWalkSpeed.TextSize = 14.000
+SubmitWalkSpeed.TextStrokeColor3 = Color3.fromRGB(167, 167, 167)
+SubmitWalkSpeed.TextStrokeTransparency = 0.000
+SubmitWalkSpeed.TextWrapped = true
+
+SubmitJumpPower.Name = "SubmitJumpPower"
+SubmitJumpPower.Parent = BackgroundFrame
+SubmitJumpPower.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+SubmitJumpPower.Position = UDim2.new(0.559164703, 0, 0.565542996, 0)
+SubmitJumpPower.Size = UDim2.new(0, 182, 0, 41)
+SubmitJumpPower.Font = Enum.Font.TitilliumWeb
+SubmitJumpPower.Text = "Submit"
+SubmitJumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitJumpPower.TextScaled = true
+SubmitJumpPower.TextSize = 14.000
+SubmitJumpPower.TextStrokeColor3 = Color3.fromRGB(167, 167, 167)
+SubmitJumpPower.TextStrokeTransparency = 0.000
+SubmitJumpPower.TextWrapped = true
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+Frame.Size = UDim2.new(0, 617, 0, 42)
+
+UICorner_2.Parent = Frame
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0388349779, 0, 0, 0)
+Title.Size = UDim2.new(0, 570, 0, 42)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Walk Speed & Jump Power Gui"
+Title.TextColor3 = Color3.fromRGB(49, 49, 49)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = Main
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.Position = UDim2.new(0.921730161, 0, 0, 0)
+CloseButton.Size = UDim2.new(0, 47, 0, 42)
+CloseButton.Font = Enum.Font.Nunito
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextScaled = true
+CloseButton.TextSize = 14.000
+CloseButton.TextStrokeTransparency = 0.000
+CloseButton.TextWrapped = true
+
+UICorner_3.Parent = CloseButton
+
+ButtonRespawn.Name = "ButtonRespawn"
+ButtonRespawn.Parent = Main
+ButtonRespawn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+ButtonRespawn.BorderColor3 = Color3.fromRGB(128, 128, 128)
+ButtonRespawn.BorderSizePixel = 0
+ButtonRespawn.Position = UDim2.new(0.827508152, -310, 0.110778391, 30)
+ButtonRespawn.Size = UDim2.new(0.347572863, 0, 0.11083822, 0)
+ButtonRespawn.ZIndex = 10
+ButtonRespawn.Selected = true
+ButtonRespawn.Font = Enum.Font.Arial
+ButtonRespawn.Text = "Respawn"
+ButtonRespawn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ButtonRespawn.TextScaled = true
+ButtonRespawn.TextSize = 12.000
+ButtonRespawn.TextWrapped = true
+
+UICorner_4.Parent = ButtonRespawn
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Position = UDim2.new(0.80744338, 0, 0.904191613, 0)
+TextLabel.Size = UDim2.new(0, 119, 0, 32)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "V 2.5"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+FPSLabel.Name = "FPSLabel"
+FPSLabel.Parent = Main
+FPSLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPSLabel.BackgroundTransparency = 1.000
+FPSLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+FPSLabel.Position = UDim2.new(0.0016181469, 0, 0.901197612, 0)
+FPSLabel.Size = UDim2.new(0, 119, 0, 32)
+FPSLabel.Font = Enum.Font.SourceSansBold
+FPSLabel.Text = "V 2.5"
+FPSLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSLabel.TextScaled = true
+FPSLabel.TextSize = 14.000
+FPSLabel.TextWrapped = true
+
+ImageLabel.Parent = Main
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.464401275, 0, 0.823353291, 0)
+ImageLabel.Size = UDim2.new(0, 57, 0, 59)
+ImageLabel.Image = "rbxassetid://7150173906"
+ImageLabel.ImageColor3 = Color3.fromRGB(62, 62, 62)
+
+UICorner_5.Parent = ImageLabel
+
+TextLabel_2.Parent = Main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(0.21682848, 0, 0.904191613, 0)
+TextLabel_2.Size = UDim2.new(0, 341, 0, 32)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "V 2.5"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+-- Scripts:
+
+local function KHJVJN_fake_script() -- SubmitWalkSpeed.SubmitWalkSpeedScript 
+	local script = Instance.new('LocalScript', SubmitWalkSpeed)
+
+	local mainframe = script.Parent.Parent
+	local submitbutton = script.Parent
+	
+	submitbutton.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = mainframe.WalkSpeedBox.Text
+	end)
+end
+coroutine.wrap(KHJVJN_fake_script)()
+local function HFYDHA_fake_script() -- SubmitJumpPower.SubmitJumpPowerScript 
+	local script = Instance.new('LocalScript', SubmitJumpPower)
+
+	local mainframe = script.Parent.Parent
+	local submitbutton = script.Parent
+	
+	submitbutton.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = mainframe.JumpPowerBox.Text
+	end)
+end
+coroutine.wrap(HFYDHA_fake_script)()
+local function XEUYWO_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	local plr = game.Players.LocalPlayer
+	
+	plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "r" then
+			script.Parent.Visible = true
+		end
+	end)
+end
+coroutine.wrap(XEUYWO_fake_script)()
+local function ATMJE_fake_script() -- CloseButton.LocalScript 
+	local script = Instance.new('LocalScript', CloseButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(ATMJE_fake_script)()
+local function CHTMMG_fake_script() -- ButtonRespawn.LocalScript 
+	local script = Instance.new('LocalScript', ButtonRespawn)
+
+	local player = game.Players.LocalPlayer 
+	local button = script.Parent
+	
+	button.MouseButton1Click:connect(function()
+		player.Character.Humanoid.Health = 0
+	end)
+	
+end
+coroutine.wrap(CHTMMG_fake_script)()
+local function KHRF_fake_script() -- FPSLabel.LocalScript 
+	local script = Instance.new('LocalScript', FPSLabel)
+
+	local fps = 0
+	local rs = game:GetService'RunService'
+	
+	function updateFPS()
+		fps = fps + 1
+	end
+	
+	rs.RenderStepped:connect(updateFPS)
+	
+	while wait'1' do
+		script.Parent.Text = fps .." FPS"
+		fps = 0
+	end
+end
+coroutine.wrap(KHRF_fake_script)()
+local function PBKL_fake_script() -- TextLabel_2.Script 
+	local script = Instance.new('Script', TextLabel_2)
+
+	while true do
+		script.Parent.Text = "R" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R " --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R k" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R ke" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key " --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key O" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key Op" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key Ope" --- you can change this to whatever you want!
+		wait(0.2)
+		script.Parent.Text = "R key Open" --- you can change this to whatever you want!
+		wait(0.2)
+	end
+	--R key Open
+end
+coroutine.wrap(PBKL_fake_script)()
